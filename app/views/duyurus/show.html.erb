@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @duyuru.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @duyuru.body %>
+</p>
+
+<%= link_to 'Edit', edit_duyuru_path(@duyuru) %> |
+<%= link_to 'Back', duyurus_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Duyurus</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @duyurus.each do |duyuru| %>
+      <tr>
+        <td><%= duyuru.title %></td>
+        <td><%= duyuru.body %></td>
+        <td><%= link_to 'Show', duyuru %></td>
+        <td><%= link_to 'Edit', edit_duyuru_path(duyuru) %></td>
+        <td><%= link_to 'Destroy', duyuru, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Duyuru', new_duyuru_path %>

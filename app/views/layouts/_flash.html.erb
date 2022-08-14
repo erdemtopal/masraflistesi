@@ -1,0 +1,11 @@
+<div data-controller="autohide">
+
+	<div class=" container alert alert-warning alert-dismissible fade show" role="alert">
+	      <% flash.each do |key, value| %>
+			<% key %>
+			<%= value %>
+		<% end %>
+	    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+	
+</div>

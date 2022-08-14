@@ -1,0 +1,28 @@
+<%= form_with(model: duyuru) do |form| %>
+  <% if duyuru.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(duyuru.errors.count, "error") %> prohibited this duyuru from being saved:</h2>
+
+      <ul>
+        <% duyuru.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= form.number_field :user_id, id: :duyuru_user_id, class:"form-control", value:current_user.id, type: :hidden %>
+  </div>
+  <div class="field">
+    <%= form.label :"Duyuru başlığı:" %>
+    <%= form.text_field :title, class:"form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :"Duyuru:"%>
+    <%= form.text_area :body , class:"form-control"%>
+  </div>
+  <div class="actions">
+    <%= form.submit "Duyuru Oluştur", class:"btn btn-primary mt-1" %>
+  </div>
+<% end %>

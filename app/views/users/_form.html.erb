@@ -1,0 +1,24 @@
+<div>
+<%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this admin from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <p><strong>Şirket Adı: </strong> <%= form.text_field :name, class:"form-control"%></p>
+  <p><strong>Muhasebe Mail Adresi: </strong> <%= form.text_field :muhasebe_mail, class:"form-control" %></p>
+  
+
+  <div class="actions">
+    <%= form.submit "Güncelle", class:"btn btn-outline-primary"%>
+  </div>
+<% end %>
+</div>
+
+

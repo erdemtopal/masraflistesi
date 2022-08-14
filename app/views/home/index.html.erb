@@ -1,0 +1,66 @@
+<%# HERO %>
+<div class="container">
+    <div class="row g-2">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                <h1 class="display-4 mt-2 me-2" style="color: #c1502e;">
+                    Personel taleplerinizi tek bir platformdan yönetin! </h1>
+                    <% if user_signed_in? %>
+                        <%= link_to "Şirket Paneli", dashboard_index_path, class:"btn btn-primary rounded-pill mt-5 px-5 py-2" %>
+                    <% else %>
+                    
+                            <%= render "shared/signup" %>
+                    <% end %>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 pt-5 ">
+                <%= image_tag "07.jpg", {class: "img-fluid"} %>
+            </div>
+    </div>
+</div>
+<%# özellikler%>
+<div class="text-center text-white" style="background-color: #f1ece5;">
+    <div class="container py-4">
+        <blockquote class="blockquote" style="color: #b85032;">Yüksek yazılım, bakım, kurulum ve danışman maliyetleri olmadan kolayca personel talep süreçlerinizi yönetin. Web tabanlı iş süreçleri ile güvenli ve ekonomik çözümlerden faydalanın. 
+        </blockquote>
+    </div>
+</div>
+<%# SERVICES %>
+<div style="background-color: #f3f2f0;">
+    <div class="container">
+        <div class="row g-2">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 mt-4 content-center" style="height: 200px;">
+                <%= image_tag "03.png", {class: "img-fluid", style:"height: 200px"} %>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 mt-4">
+                <h2>Masraf Listesi Süreçleri</h2>
+                <p style="text-align: justify;">Çalışanlarınızı ve mail adreslerini tanımladıktan sonra, onay mekanizmalarını danışman desteği gerekmeden oluşturabiliyorsunuz. Masraf türlerini, projeleri ve proje bütçelerini kendiniz tanımlayabilirsiniz. Masraf listelerini TL, USD ve Euro cinsinden oluşturabilirsiniz. Masraf onaylarını masraf miktarına göre sınıflandırabilir ve onay aşamalarını değiştirebilirsiniz. Masraf listeslerine ilgili faturaların görüntülerini ekleyebilirsiniz. Fatura görüntüleriniz kriptolanmış şekilde Amazon serverlarında saklanır. Sizden başka kimse faturalarınıza ulaşamaz</p>
+                <a class="btn btn-outline-dark" href="/home/underconstruction" role="button">Detaylı bilgi</a>
+            </div>
+            <div class="row g-2">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 mt-3" style="height: 200px;">
+                <%= image_tag "06.png", {class: "img-fluid", style:"height: 170px"} %>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 mt-3">
+                <h2>Avans Talep Süreçleri</h2>
+                <p style="text-align: justify;">Çalışanlarınızın maaş avans ve iş avansı süreçlerini de uygulamamız üzerinden oluşturabilirsiniz. İş avanslarını kendi belirleyeceğiniz avans türlerine tanımlayabilirsiniz. Tanımlayacağınız projeler ve proje bütçeleri ile avans taleplerini gruplandırabilirsiniz. Avans onay aşamalarını çalışana ve miktara göre özel olarak danışman desteği gerekmeksizin kendiniz yapabilirsiniz.</p>
+                <a class="btn btn-outline-dark" href="/home/underconstruction" role="button">Detaylı bilgi</a>
+            </div>
+            <div class="row g-2">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 mt-3" style="height: 200px;">
+                <%= image_tag "09.png", {class: "img-fluid", style:"height: 200px"} %>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 mt-3">
+                <h2>Yıllık İzin ve Mazeret İzni Süreçleri</h2>
+                <p style="text-align: justify;">Çalışanlarınızın izin haklarını sisteme tanımladıktan sonra izin onay süreçlerini kişiye özel tanımlayabilirsiniz. İzin talep formlarında izin isteme nedeni belirtilebilmektedir. Gerektiğinde sağlık raporu ve mazerete ilişkin belgeler de sisteme eklenebilmektedir. </p>
+                <a class="btn btn-outline-dark" href="/home/underconstruction" role="button">Detaylı bilgi</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%# Footer %>
+
+<footer class="border-top footer mt-auto py-3 text-start ">
+  <div class="container">
+    <span class="text-muted border-top-0">www.masraflistesi.com  |  D4 Software Solutions  |  2022  | <%= image_tag "2.png", {height: 50} %></span>
+  </div>
+</footer>
